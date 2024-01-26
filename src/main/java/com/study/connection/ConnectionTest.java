@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class ConnectionTest {
 
-    static final String DB_URL = "jdbc:mysql://localhost:3306/ebrainsoft_study";
+    static final String DB_URL = "jdbc:mysql://localhost:3308/ebrainsoft_study";
     static final String USER = "ebsoft";
     static final String PASS = "ebsoft";
 
@@ -20,6 +20,7 @@ public class ConnectionTest {
             //STEP 2: Register JDBC driver
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            System.out.println("DB접속 성공");
 
         } catch (SQLException ex) {
             // handle any errors

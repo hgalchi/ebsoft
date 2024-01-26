@@ -3,19 +3,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>JSP - Hello </title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1><%= "Hello !!3434" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+
 
 
 <%
 
     ConnectionTest t = new ConnectionTest();
-    out.println(t.getConnection());
+    System.out.println(t.getConnection());
 
 %>
 
