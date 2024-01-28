@@ -11,16 +11,21 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name = "frontController", urlPatterns = "/front-controller/*")
+@WebServlet(name = "frontController", urlPatterns = "/board/*")
 public class FrontController extends HttpServlet {
 
     private Map<String, Controller> controllerMap = new HashMap<>();
 
     public FrontController() {
-        controllerMap.put("/front-controller/board/list", new BoardListController());
+        //목록
+        controllerMap.put("/board/free/list", new BoardListController());
+        //등록
+        controllerMap.put("/board/free/write", new BoardRegisterController());
+        //수정
+        //todo : board/free/modify/글번호
+        controllerMap.put("/board/free/modify", new BoardModifyController());
 
     }
-
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
